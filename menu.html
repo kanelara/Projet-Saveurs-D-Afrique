@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu Complet - Saveurs d'Afrique</title>
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#F59E0B',
+            secondary: '#EF4444'
+          },
+          borderRadius: {
+            'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50">
+
+  <!-- Header identique à la page d'accueil -->
+  <header class="bg-amber-400 px-6 py-3">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 flex items-center justify-center">
+          
+        </div>
+        <a href="index.html" class="hover:opacity-80 transition-opacity">
+    <img src="image projet/logo.png" alt="Logo Saveurs d'Afrique" class="w-14 h-50 object-contain">
+</a>
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="#menu-complet" class="nav-link active">Menu</a>
+        <a href="apropos.html" class="nav-link">À propos</a>
+        <a href="reservation.html" class="nav-link">Réservation</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="md:hidden w-6 h-6 flex items-center justify-center">
+        <i class="ri-menu-line text-lg text-amber-900"></i>
+      </div>
+    </div>
+  </header>
+
+  <section id="menu-complet" class="py-12">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-gray-900 mb-3 font-['Pacifico']">Notre Carte Complète</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Découvrez toutes nos spécialités africaines et internationales
+        </p>
+      </div>
+
+      <div class="md:flex">
+        <aside class="md:w-1/4 mb-8 md:sticky md:top-24 self-start bg-white p-4 rounded-lg shadow-lg">
+          <h3 class="text-xl font-semibold mb-4 text-amber-700 border-b pb-2">Catégories</h3>
+          <ul class="space-y-3 menu-nav-links">
+            <li><a href="#entrees" class="text-gray-700 hover:text-primary transition-colors block py-1">Entrées</a></li>
+            <li><a href="#plats-resistance" class="text-gray-700 hover:text-primary transition-colors block py-1">Plats de résistance</a></li>
+            <li><a href="#desserts" class="text-gray-700 hover:text-primary transition-colors block py-1">Desserts</a></li>
+            <li><a href="#boissons" class="text-gray-700 hover:text-primary transition-colors block py-1">Boissons</a></li>
+          </ul>
+        </aside>
+
+        <main class="md:w-3/4 md:pl-10">
+
+          <section id="entrees" class="mb-10 pt-4 scroll-mt-24">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-primary pb-2">Entrées</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <div class="w-full h-48">
+                    <img src="image projet/entrées/Beignets d’igname.jpg" alt="Beignets d'igname croustillants" class="w-full h-full object-cover">
+                </div>
+                <div class="p-5 flex-grow">
+                  <h3 class="text-xl font-bold text-gray-900 mb-1">Beignets d'igname</h3>
+                  <p class="text-sm text-gray-600 mb-3">Petits beignets croustillants à base d'igname et d'épices africaines.</p>
+                  <span class="text-lg font-semibold text-primary">2 500 CFA</span>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/entrées/Accras de morue.jpg" alt="Accras de morue vue de près" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Accras de morue</h3>
+                      <p class="text-sm text-gray-600 mb-3">Beignets parfumés aux herbes et épices.</p>
+                      <span class="text-lg font-semibold text-primary">3 000 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/entrées/Salade africaine.jpg" alt="Salade africaine" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Salade africaine</h3>
+                      <p class="text-sm text-gray-600 mb-3">Avocat, mangue et vinaigrette citronnée.</p>
+                      <span class="text-lg font-semibold text-primary">2 800 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <div class="w-full h-48">
+                    <img src="image projet/entrées/Soupe de légumes.jpg" alt="Soupe de légumes frais" class="w-full h-full object-cover">
+                </div>
+                <div class="p-5 flex-grow">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Soupe de légumes</h3>
+                    <p class="text-sm text-gray-600 mb-3">Soupe maison avec légumes frais de saison.</p>
+                    <span class="text-lg font-semibold text-primary">3 000 CFA</span>
+                </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                <div class="w-full h-48">
+                    <img src="image projet/entrées/Bruschetta tomate basilic.jpg" alt="Bruschetta tomate basilic" class="w-full h-full object-cover">
+                </div>
+                <div class="p-5 flex-grow">
+                    <h3 class="text-xl font-bold text-gray-900 mb-1">Bruschetta tomate-basilic</h3>
+                    <p class="text-sm text-gray-600 mb-3">Pain grillé avec tomates fraîches et huile d'olive.</p>
+                    <span class="text-lg font-semibold text-primary">3 500 CFA</span>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <hr class="my-10 border-gray-300">
+
+          <section id="plats-resistance" class="mb-10 pt-4 scroll-mt-24">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-primary pb-2">Plats de résistance</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/plat de résistance/Thiéboudiène royal.jpg" alt="Thiéboudiène royal" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Thiéboudiène royal</h3>
+                      <p class="text-sm text-gray-600 mb-3">Riz au poisson sénégalais servi avec légumes mijotés.</p>
+                      <span class="text-lg font-semibold text-primary">6 500 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/plat de résistance/Poulet Yassa.webp" alt="Poulet Yassa" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Poulet Yassa</h3>
+                      <p class="text-sm text-gray-600 mb-3">Poulet mariné au citron et aux oignons caramélisés.</p>
+                      <span class="text-lg font-semibold text-primary">5 500 CFA</span>
+                  </div>
+              </div>
+                
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/plat de résistance/Mafé au bœuf.jpg" alt="Mafé au bœuf" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Mafé au bœuf</h3>
+                      <p class="text-sm text-gray-600 mb-3">Bœuf tendre mijoté dans une sauce onctueuse à la pâte d'arachide.</p>
+                      <span class="text-lg font-semibold text-primary">6 000 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/plat de résistance/Brochettes d’agneau.jpg" alt="Brochettes d'agneau grillées" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Brochettes d'agneau</h3>
+                      <p class="text-sm text-gray-600 mb-3">Agneau grillé aux épices, servi avec attiéké.</p>
+                      <span class="text-lg font-semibold text-primary">7 000 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/plat de résistance/Poisson braisé.jpg" alt="Poisson entier grillé" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Poisson braisé</h3>
+                      <p class="text-sm text-gray-600 mb-3">Poisson entier grillé, accompagné d'alloco et sauce pimentée.</p>
+                      <span class="text-lg font-semibold text-primary">7 500 CFA</span>
+                  </div>
+              </div>
+              
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/plat de résistance/Couscous marocain.jpg" alt="Couscous marocain" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Couscous marocain</h3>
+                      <p class="text-sm text-gray-600 mb-3">Couscous aux légumes et viande au choix (poulet ou agneau).</p>
+                      <span class="text-lg font-semibold text-primary">6 800 CFA</span>
+                  </div>
+              </div>
+              
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/plat de résistance/poulet-roti-a-la-provencale-.jfif" alt="Poulet rôti à la provençale" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Poulet rôti à la provençale</h3>
+                      <p class="text-sm text-gray-600 mb-3">Poulet rôti au four avec herbes méditerranéennes.</p>
+                      <span class="text-lg font-semibold text-primary">6 500 CFA</span>
+                  </div>
+              </div>
+              
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/plat de résistance/Spaghetti bolognaise.jpg" alt="Spaghetti bolognaise" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Spaghetti bolognaise</h3>
+                      <p class="text-sm text-gray-600 mb-3">Pâtes à la sauce tomate et viande hachée.</p>
+                      <span class="text-lg font-semibold text-primary">5 800 CFA</span>
+                  </div>
+              </div>
+              
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/plat de résistance/Pizza Margherita.jpeg" alt="Pizza Margherita" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Pizza Margherita</h3>
+                      <p class="text-sm text-gray-600 mb-3">Pizza classique avec mozzarella et basilic.</p>
+                      <span class="text-lg font-semibold text-primary">6 000 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/plat de résistance/Burger maison.jpg" alt="Burger maison" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Burger maison</h3>
+                      <p class="text-sm text-gray-600 mb-3">Pain brioché, steak de bœuf, fromage, frites maison.</p>
+                      <span class="text-lg font-semibold text-primary">6 500 CFA</span>
+                  </div>
+              </div>
+
+            </div>
+          </section>
+
+          <hr class="my-10 border-gray-300">
+
+          <section id="desserts" class="mb-10 pt-4 scroll-mt-24">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-primary pb-2">Desserts</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/dessert/thiakri.jpeg" alt="Thiakry (dégué)" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Thiakry (dégué)</h3>
+                      <p class="text-sm text-gray-600 mb-3">Couscous de mil au yaourt parfumé à la vanille.</p>
+                      <span class="text-lg font-semibold text-primary">2 500 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/dessert/Beignets sucrés.jpg" alt="Beignets sucrés" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Beignets sucrés</h3>
+                      <p class="text-sm text-gray-600 mb-3">Beignets moelleux au sucre glace.</p>
+                      <span class="text-lg font-semibold text-primary">2 000 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/dessert/Gâteau à la banane.jpg" alt="Gâteau à la banane plantain" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Gâteau à la banane plantain</h3>
+                      <p class="text-sm text-gray-600 mb-3">Cake fondant à la banane caramélisée.</p>
+                      <span class="text-lg font-semibold text-primary">3 000 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/dessert/tarte au citron meringuée.jpg" alt="Tarte au citron meringuée" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Tarte au citron meringuée</h3>
+                      <p class="text-sm text-gray-600 mb-3">Dessert classique et rafraîchissant.</p>
+                      <span class="text-lg font-semibold text-primary">3 500 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/dessert/Crêpes sucrées.jpg" alt="Crêpes sucrées" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Crêpes sucrées</h3>
+                      <p class="text-sm text-gray-600 mb-3">Crêpes garnies (nutella, sucre, confiture).</p>
+                      <span class="text-lg font-semibold text-primary">3 000 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/dessert/Fondant au chocolat.jpg" alt="Fondant au chocolat" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Fondant au chocolat</h3>
+                      <p class="text-sm text-gray-600 mb-3">Gâteau au chocolat cœur coulant.</p>
+                      <span class="text-lg font-semibold text-primary">4 000 CFA</span>
+                  </div>
+              </div>
+
+            </div>
+          </section>
+
+          <hr class="my-10 border-gray-300">
+
+          <section id="boissons" class="mb-10 pt-4 scroll-mt-24">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 border-b-2 border-primary pb-2">Boissons</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/boisson/bissap-Jus.png" alt="Jus de bissap" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Jus de bissap</h3>
+                      <p class="text-sm text-gray-600 mb-3">Boisson fraîche à base d'hibiscus.</p>
+                      <span class="text-lg font-semibold text-primary">1 500 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/boisson/Jus de bouye.jpg" alt="Jus de bouye" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Jus de bouye</h3>
+                      <p class="text-sm text-gray-600 mb-3">Boisson traditionnelle au fruit de baobab.</p>
+                      <span class="text-lg font-semibold text-primary">1 500 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/boisson/Jus de gingembre.jpg" alt="Jus de gingembre" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Jus de gingembre</h3>
+                      <p class="text-sm text-gray-600 mb-3">Boisson piquante et rafraîchissante.</p>
+                      <span class="text-lg font-semibold text-primary">1 800 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/boisson/the-menthe.png" alt="Thé à la menthe" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Thé à la menthe</h3>
+                      <p class="text-sm text-gray-600 mb-3">Thé vert servi à la marocaine.</p>
+                      <span class="text-lg font-semibold text-primary">1 200 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/boisson/expresso.jpg" alt="Café expresso" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Café expresso</h3>
+                      <p class="text-sm text-gray-600 mb-3">Café serré italien.</p>
+                      <span class="text-lg font-semibold text-primary">1 500 CFA</span>
+                  </div>
+              </div>
+              
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/boisson/Eau minérale.jpg" alt="Eau minérale" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Eau minérale</h3>
+                      <p class="text-sm text-gray-600 mb-3">Petite bouteille (50cl).</p>
+                      <span class="text-lg font-semibold text-primary">1 000 CFA</span>
+                  </div>
+              </div>
+              
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/boisson/Sodas.jpg" alt="Sodas" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Sodas</h3>
+                      <p class="text-sm text-gray-600 mb-3">Coca, Fanta, Sprite (33cl).</p>
+                      <span class="text-lg font-semibold text-primary">1 500 CFA</span>
+                  </div>
+              </div>
+              
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/boisson/Smoothie exotique.jpg" alt="Smoothie exotique" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Smoothie exotique</h3>
+                      <p class="text-sm text-gray-600 mb-3">Mangue, ananas et papaye mixés.</p>
+                      <span class="text-lg font-semibold text-primary">2 800 CFA</span>
+                  </div>
+              </div>
+              
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/boisson/Vin rouge (verre).jpg" alt="Vin rouge (verre)" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Vin rouge (verre)</h3>
+                      <p class="text-sm text-gray-600 mb-3">Vin de table (origine France ou Afrique du Sud).</p>
+                      <span class="text-lg font-semibold text-primary">3 500 CFA</span>
+                  </div>
+              </div>
+
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden flex flex-col">
+                  <div class="w-full h-48">
+                      <img src="image projet/boisson/Bière locale.jpg" alt="Bière locale" class="w-full h-full object-cover">
+                  </div>
+                  <div class="p-5 flex-grow">
+                      <h3 class="text-xl font-bold text-gray-900 mb-1">Bière locale</h3>
+                      <p class="text-sm text-gray-600 mb-3">Bière blonde rafraîchissante.</p>
+                      <span class="text-lg font-semibold text-primary">2 500 CFA</span>
+                  </div>
+              </div>
+
+            </div>
+          </section>
+
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer identique à la page d'accueil -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Logo + description -->
+        <div>
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="w-8 h-8 flex items-center justify-center">
+            
+            </div>
+              <img src="image projet/logo.png" alt="Logo Saveurs d'Afrique" class="w-14 h-14 object-contain" >
+          </div>
+          <p class="text-gray-400 mb-6">
+            Découvrez l'authenticité de la cuisine africaine dans une ambiance chaleureuse au cœur de Dakar.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+              <i class="ri-facebook-fill text-lg"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+              <i class="ri-instagram-line text-lg"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+              <i class="ri-twitter-line text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Navigation</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Accueil</a></li>
+            <li><a href="menu.html" class="text-gray-400 hover:text-white transition-colors">Menu</a></li>
+            <li><a href="apropos.html" class="text-gray-400 hover:text-white transition-colors">À propos</a></li>
+            <li><a href="reservation.html" class="text-gray-400 hover:text-white transition-colors">Réservation</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Spécialités -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Nos Spécialités</h3>
+          <ul class="space-y-3">
+            <li class="text-gray-400">Poulet Yassa</li>
+            <li class="text-gray-400">Poisson Braisé</li>
+            <li class="text-gray-400">Burger maison</li>
+            <li class="text-gray-400">Thiéboudiène royal</li>
+            <li class="text-gray-400">Mafé au bœuf </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Contact</h3>
+          <div class="space-y-3">
+            <p class="text-gray-400">
+              Almadies, Dakar – Sénégal
+            </p>
+            <p class="text-gray-400">+221 77 123 45 67</p>
+            <p class="text-gray-400">contact@saveurs-afrique.sn</p>
+          </div>
+          
+          <!-- Carte Google Maps -->
+          <div class="mt-6">
+            <h4 class="text-md font-semibold mb-3">Notre emplacement</h4>
+            <div class="rounded-lg overflow-hidden shadow-md h-48">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.527963750484!2d-17.4472229246873!3d14.72467848579801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1730e5da8d0a1%3A0x8d4e0b5b5c5d5e5f!2sAlmadies%2C%20Dakar%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sfr!4v1641234567890!5m2!1sfr!2sfr" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bas du footer -->
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-400">
+          © 2024 Saveurs d'Afrique. Tous droits réservés.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="menu.js"></script>
+</body>
+</html>

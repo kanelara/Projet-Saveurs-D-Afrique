@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Réservation - Saveurs d'Afrique</title>
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#F59E0B',
+            secondary: '#EF4444'
+          },
+          borderRadius: {
+            'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* Pour s'assurer que le fond du corps est bien blanc pour contraster avec la carte */
+    body {
+        background-color: #f9fafb; /* gray-50 */
+    }
+    /* Style pour les champs de formulaire (uniformité) */
+    .form-input {
+        width: 100%;
+        padding: 0.75rem; /* p-3 */
+        border: 1px solid #d1d5db; /* border-gray-300 */
+        border-radius: 0.5rem; /* rounded-lg */
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    }
+    .form-input:focus {
+        border-color: #F59E0B; /* primary color */
+        outline: 0;
+        box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.5); /* shadow-outline-amber */
+    }
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Header identique à la page d'accueil -->
+  <header class="bg-amber-400 px-6 py-3">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 flex items-center justify-center">
+          
+        </div>
+        <a href="index.html" class="hover:opacity-80 transition-opacity">
+    <img src="image projet/logo.png" alt="Logo Saveurs d'Afrique" class="w-14 h-50 object-contain">
+</a>
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="index.html" class="nav-link">Accueil</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="apropos.html" class="nav-link">À propos</a>
+        <a href="reservation.html" class="nav-link active">Réservation</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="md:hidden w-6 h-6 flex items-center justify-center">
+        <i class="ri-menu-line text-lg text-amber-900"></i>
+      </div>
+    </div>
+  </header>
+
+  <section id="reservation" class="py-16">
+    <div class="max-w-4xl mx-auto px-6">
+      
+      <div class="text-center mb-10">
+        <h1 class="text-4xl font-bold text-gray-900 mb-3 font-['Pacifico']">Réservez votre Table</h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Faites votre réservation en ligne en quelques clics. Nous vous attendons !
+        </p>
+      </div>
+
+      <div class="bg-white p-8 md:p-10 rounded-xl shadow-2xl border border-gray-100">
+
+        <form action="#" method="POST" class="space-y-6">
+          
+          <div>
+            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nom Complet</label>
+            <input type="text" id="name" name="name" required placeholder="Votre nom et prénom"
+                   class="form-input">
+          </div>
+
+          <div>
+            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Adresse Email</label>
+            <input type="email" id="email" name="email" required placeholder="exemple@domaine.com"
+                   class="form-input">
+          </div>
+          
+          <div>
+            <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Téléphone (WhatsApp)</label>
+            <input type="tel" id="phone" name="phone" required placeholder="+221 33 823 45 67"
+                   class="form-input">
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            
+            <div>
+              <label for="date" class="block text-sm font-medium text-gray-700 mb-2">Date de la Réservation</label>
+              <input type="date" id="date" name="date" required
+                     class="form-input">
+            </div>
+
+            <div>
+              <label for="time" class="block text-sm font-medium text-gray-700 mb-2">Heure Préférée</label>
+              <select id="time" name="time" required
+                      class="form-input appearance-none">
+                <option value="" disabled selected>Choisir l'heure</option>
+                <option value="12:00">12:00 (Déjeuner)</option>
+                <option value="13:00">13:00 (Déjeuner)</option>
+                <option value="19:30">19:30 (Dîner)</option>
+                <option value="20:30">20:30 (Dîner)</option>
+              </select>
+            </div>
+
+            <div>
+              <label for="guests" class="block text-sm font-medium text-gray-700 mb-2">Nombre de Personnes</label>
+              <input type="number" id="guests" name="guests" min="1" max="15" required placeholder="Ex: 4"
+                     class="form-input">
+            </div>
+
+          </div>
+
+          <div>
+              <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Type de Service</label>
+              <select id="service" name="service" required
+                      class="form-input appearance-none">
+                <option value="diner" selected>Dîner</option>
+                <option value="dejeuner">Déjeuner</option>
+                <option value="evenement">Événement Spécial (Plus de 15 pers.)</option>
+              </select>
+          </div>
+
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Demandes Spéciales (allergies, siège bébé, etc.)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Veuillez indiquer toute information importante pour votre table."
+                      class="form-input"></textarea>
+          </div>
+
+          <div>
+            <button type="submit"
+                    class="w-full btn-primary flex justify-center items-center py-3 text-lg">
+                <i class="ri-calendar-check-fill mr-2"></i>
+                Confirmer la Réservation
+            </button>
+          </div>
+          
+          <p class="text-xs text-center text-gray-500 mt-4">
+              * Une confirmation vous sera envoyée par email et/ou WhatsApp peu après la soumission.
+          </p>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer identique à la page d'accueil -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Logo + description -->
+        <div>
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="w-8 h-8 flex items-center justify-center">
+            
+            </div>
+              <img src="image projet/logo.png" alt="Logo Saveurs d'Afrique" class="w-14 h-14 object-contain" >
+          </div>
+          <p class="text-gray-400 mb-6">
+            Découvrez l'authenticité de la cuisine africaine dans une ambiance chaleureuse au cœur de Dakar.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+              <i class="ri-facebook-fill text-lg"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+              <i class="ri-instagram-line text-lg"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+              <i class="ri-twitter-line text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Navigation</h3>
+          <ul class="space-y-3">
+            <li><a href="index.html" class="text-gray-400 hover:text-white transition-colors">Accueil</a></li>
+            <li><a href="menu.html" class="text-gray-400 hover:text-white transition-colors">Menu</a></li>
+            <li><a href="apropos.html" class="text-gray-400 hover:text-white transition-colors">À propos</a></li>
+            <li><a href="reservation.html" class="text-gray-400 hover:text-white transition-colors">Réservation</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Spécialités -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Nos Spécialités</h3>
+          <ul class="space-y-3">
+            <li class="text-gray-400">Poulet Yassa</li>
+            <li class="text-gray-400">Poisson Braisé</li>
+            <li class="text-gray-400">Burger maison</li>
+            <li class="text-gray-400">Thiéboudiène royal</li>
+            <li class="text-gray-400">Mafé au bœuf </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Contact</h3>
+          <div class="space-y-3">
+            <p class="text-gray-400">
+              Almadies, Dakar – Sénégal
+            </p>
+            <p class="text-gray-400">+221 33 823 45 67</p>
+            <p class="text-gray-400">contact@saveursdafrique.sn</p>
+          </div>
+          
+          <!-- Carte Google Maps -->
+          <div class="mt-6">
+            <h4 class="text-md font-semibold mb-3">Notre emplacement</h4>
+            <div class="rounded-lg overflow-hidden shadow-md h-48">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.527963750484!2d-17.4472229246873!3d14.72467848579801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1730e5da8d0a1%3A0x8d4e0b5b5c5d5e5f!2sAlmadies%2C%20Dakar%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sfr!4v1641234567890!5m2!1sfr!2sfr" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bas du footer -->
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-400">
+          © 2024 Saveurs d'Afrique. Tous droits réservés.
+        </p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saveurs d'Afrique - Restaurant Africain Authentique à Dakar</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#F59E0B',
+            secondary: '#EF4444'
+          },
+          borderRadius: {
+            'button': '8px'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+
+  <!-- CSS perso -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-white">
+
+  <!-- Header -->
+  <header class="bg-amber-400 px-6 py-3">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-8 h-8 flex items-center justify-center">
+          
+        </div>
+        <a href="index.html" class="hover:opacity-80 transition-opacity">
+    <img src="image projet/logo.png" alt="Logo Saveurs d'Afrique" class="w-14 h-50 object-contain">
+</a>
+          
+      </div>
+      <nav class="hidden md:flex space-x-6">
+        <a href="#accueil" class="nav-link">Accueil</a>
+        <a href="#menu" class="nav-link">Menu</a>
+        <a href="apropos.html" class="nav-link">À propos</a>
+        <a href="reservation.html" class="nav-link">Réservation</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <div class="md:hidden w-6 h-6 flex items-center justify-center">
+        <i class="ri-menu-line text-lg text-amber-900"></i>
+      </div>
+    </div>
+  </header>
+
+ <section id="accueil" class="bg-amber-400 py-16">
+    
+    <div class="relative">
+        <div class="w-full h-96 rounded-none overflow-hidden shadow-2xl">
+            <img src="image projet/resto.jpg" alt="Plats traditionnels africains" class="w-full h-full object-cover">
+            
+            <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                
+                <div class="text-white px-6 max-w-xl mx-auto text-center">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-3 leading-tight">
+                        Voyager grâce aux<br>
+                        <span class="text-amber-300">saveurs d'Afrique</span>
+                    </h1>
+                    <p class="text-base md:text-lg mb-6 text-gray-200">
+                        Découvrez l'authenticité de la cuisine africaine traditionnelle
+                    </p>
+                    <button onclick="window.location.href='reservation.html'" class="btn-primary">
+                        Réserver maintenant
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</section>
+
+ 
+  <!-- Menu -->
+  <section id="menu" class="py-12 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-amber-900 mb-3">Notre Carte</h2>
+        <p class="text-base text-gray-600 max-w-xl mx-auto">
+          Savourez nos spécialités africaines préparées avec des ingrédients frais et authentiques
+        </p>
+      </div>
+
+      <!-- Filtres -->
+      <div class="flex flex-wrap justify-center gap-3 mb-8">
+        <button class="filter-btn active-filter">Tous</button>
+        <button class="filter-btn">Entrées</button>
+        <button class="filter-btn">Plats principaux</button>
+        <button class="filter-btn">Desserts</button>
+        <button class="filter-btn">Boissons</button>
+      </div>
+
+     <!-- Exemple de plats (4 plats) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+
+  <!-- Plat 1 -->
+  <div class="card rounded-xl overflow-hidden shadow-lg">
+    <img src="image projet/plat de résistance/Poulet Yassa.webp" alt="Yassa Poulet" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold text-gray-900 mb-1">Poulet Yassa</h3>
+      <p class="text-gray-600 mb-3 text-xs">Poulet mariné au citron et aux oignons 
+caramélisés. </p>
+      <div class="flex justify-between items-center">
+        <span class="text-lg font-bold text-primary">5 500 CFA</span>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Plat 2 -->
+  <div class="card rounded-xl overflow-hidden shadow-lg">
+    <img src="image projet/plat de résistance/Poisson braisé.jpg" alt="Thiéboudienne" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold text-gray-900 mb-1">Poisson Braisé</h3>
+      <p class="text-gray-600 mb-3 text-xs">Poisson entier grillé, accompagné d'alloco 
+et sauce pimentée. </p>
+      <div class="flex justify-between items-center">
+        <span class="text-lg font-bold text-primary">7 500 CFA</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Plat 3 -->
+  <div class="card rounded-xl overflow-hidden shadow-lg">
+    <img src="image projet/plat de résistance/Burger maison.jpg" alt="Mafé Bœuf" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold text-gray-900 mb-1">Burger maison </h3>
+      <p class="text-gray-600 mb-3 text-xs">Pain brioché, steak de bœuf, fromage, frites 
+maison. </p>
+      <div class="flex justify-between items-center">
+        <span class="text-lg font-bold text-primary">6 500 CFA</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Plat 4 -->
+  <div class="card rounded-xl overflow-hidden shadow-lg">
+    <img src="image projet/plat de résistance/Thiéboudiène royal.jpg" alt="Poisson Braisé" class="w-full h-40 object-cover">
+    <div class="p-4">
+      <h3 class="text-lg font-semibold text-gray-900 mb-1">Thiéboudiène royal </h3>
+      <p class="text-gray-600 mb-3 text-xs">Riz au poisson sénégalais servi avec légumes mijotés. </p>
+      <div class="flex justify-between items-center">
+        <span class="text-lg font-bold text-primary">6 500 CFA</span>
+      </div>
+    </div>
+  </div>
+
+</div>
+      <div class="text-center">
+        <button id="view-full-menu" class="btn-secondary">Voir le menu complet</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-12">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <!-- Logo + description -->
+        <div>
+          <div class="flex items-center space-x-3 mb-6">
+            <div class="w-8 h-8 flex items-center justify-center">
+            
+            </div>
+              <img src="image projet/logo.png" alt="Logo Saveurs d'Afrique" class="w-14 h-14 object-contain" >
+          </div>
+          <p class="text-gray-400 mb-6">
+            Découvrez l'authenticité de la cuisine africaine dans une ambiance chaleureuse au cœur de Dakar.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+              <i class="ri-facebook-fill text-lg"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+              <i class="ri-instagram-line text-lg"></i>
+            </a>
+            <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-lg hover:bg-primary transition-colors">
+              <i class="ri-twitter-line text-lg"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Navigation</h3>
+          <ul class="space-y-3">
+            <li><a href="#accueil" class="text-gray-400 hover:text-white transition-colors">Accueil</a></li>
+            <li><a href="#menu" class="text-gray-400 hover:text-white transition-colors">Notre Menu</a></li>
+            <li><a href="apropos.html" class="text-gray-400 hover:text-white transition-colors">À propos</a></li>
+            <li><a href="reservation.html" class="text-gray-400 hover:text-white transition-colors">Réservation</a></li>
+            <li><a href="contact.html" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Spécialités -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Nos Spécialités</h3>
+          <ul class="space-y-3">
+            <li class="text-gray-400">Poulet Yassa</li>
+            <li class="text-gray-400">Poisson Braisé</li>
+            <li class="text-gray-400">Burger maison</li>
+            <li class="text-gray-400">Thiéboudiène royal</li>
+            <li class="text-gray-400">Mafé au bœuf </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="text-lg font-semibold mb-6">Contact</h3>
+          <div class="space-y-3">
+            <p class="text-gray-400">
+              Almadies, Dakar – Sénégal
+            </p>
+            <p class="text-gray-400">+221 77 123 45 67</p>
+            <p class="text-gray-400">contact@saveurs-afrique.sn</p>
+          </div>
+          
+          <!-- Carte Google Maps -->
+          <div class="mt-6">
+            <h4 class="text-md font-semibold mb-3">Notre emplacement</h4>
+            <div class="rounded-lg overflow-hidden shadow-md h-48">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.527963750484!2d-17.4472229246873!3d14.72467848579801!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1730e5da8d0a1%3A0x8d4e0b5b5c5d5e5f!2sAlmadies%2C%20Dakar%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2sfr!4v1641234567890!5m2!1sfr!2sfr" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bas du footer -->
+      <div class="border-t border-gray-800 mt-12 pt-8 text-center">
+        <p class="text-gray-400">
+          © 2024 Saveurs d'Afrique. Tous droits réservés.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS perso -->
+  <script src="script.js"></script>
+</body>
+</html>
